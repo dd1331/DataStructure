@@ -111,7 +111,11 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public int indexOf(Object target) {
 		// TODO: FILL THIS IN!
-		return -1;
+		int index = -1;
+		for (int i = 0; i< array.length; i++){
+			if (array[i] == target) index = i;
+		}
+		return index;
 	}
 
 	/** Checks whether an element of the array is the target.
