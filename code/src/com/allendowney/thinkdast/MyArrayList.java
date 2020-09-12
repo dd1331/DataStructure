@@ -202,7 +202,9 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T set(int index, T element) {
 		// TODO: FILL THIS IN!
-		return null;
+		T originalElement = get(index);
+		array[index] = element;
+		return originalElement;
 	}
 
 	@Override
