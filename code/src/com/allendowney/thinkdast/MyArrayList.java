@@ -193,7 +193,14 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T remove(int index) {
 		// TODO: FILL THIS IN!
-		return null;
+		if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
+		T originalElement = array[index];
+
+		for (int i = index; i < size -1 ; i++) {
+			array[i] = array[i+1];
+		}
+		size--;
+		return originalElement;
 	}
 
 	@Override

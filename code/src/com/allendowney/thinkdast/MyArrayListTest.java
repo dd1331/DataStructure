@@ -139,10 +139,10 @@ public class MyArrayListTest {
 	 */
 	@Test
 	public void testIndexOf() {
-		assertThat(list.indexOf(1), is(0));
-		assertThat(list.indexOf(2), is(1));
-		assertThat(list.indexOf(3), is(2));
-		assertThat(list.indexOf(4), is(-1));
+		assertThat(mylist.indexOf(1), is(0));
+		assertThat(mylist.indexOf(2), is(1));
+		assertThat(mylist.indexOf(3), is(2));
+		assertThat(mylist.indexOf(4), is(-1));
 	}
 
 	/**
@@ -240,29 +240,29 @@ public class MyArrayListTest {
 	 */
 	@Test
 	public void testSet() {
-		Integer val = list.set(1, 5);
+		Integer val = mylist.set(1, 5);
 		assertThat(val, is(new Integer(2)));
 
-		val = list.set(0, 6);
+		val = mylist.set(0, 6);
 		assertThat(val, is(new Integer(1)));
 
-		val = list.set(2, 7);
+		val = mylist.set(2, 7);
 		assertThat(val, is(new Integer(3)));
 
 		// return value should be 2
 		// list should be [6, 5, 7]
-		assertThat(list.get(0), is(new Integer(6)));
-		assertThat(list.get(1), is(new Integer(5)));
-		assertThat(list.get(2), is(new Integer(7)));
+		assertThat(mylist.get(0), is(new Integer(6)));
+		assertThat(mylist.get(1), is(new Integer(5)));
+		assertThat(mylist.get(2), is(new Integer(7)));
 		//System.out.println(Arrays.toString(mal.toArray()));
 
 		try {
-		    list.set(-1, 0);
+		    mylist.set(-1, 0);
 		    fail();
 		} catch (IndexOutOfBoundsException e) {} // good
 
 		try {
-		    list.set(4, 0);
+		    mylist.set(4, 0);
 		    fail();
 		} catch (IndexOutOfBoundsException e) {} // good
 }
